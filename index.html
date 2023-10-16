@@ -7,12 +7,18 @@
   </head>
   <body>
     <script>
-      var nomeCompleto = prompt("Digite o seu nome completo");
+      var nomeCompleto = prompt("Digite seu nome completo:");
 
-      var primeiroNome = nomeCompleto.split(" ");
-      primeiroNome = primeiroNome[0];
+      var nomeDividido = nomeCompleto.split(" ");
+      var primeiroNome = nomeDividido[0];
 
-      alert(`${primeiroNome}, obrigado por acessar nosso site!`);
+      if (nomeCompleto) {
+        alert(`${primeiroNome}, obrigado por acessar nosso site!`);
+      } else {
+        alert(
+          `Você não forneceu um nome completo. Por favor, tente novamente.`
+        );
+      }
     </script>
   </body>
 </html>
